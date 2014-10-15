@@ -5,7 +5,7 @@
         An Ionic Framework and Cordova project.
     </description>
   <author email="shrutijalewar@gmail.com" href="http://shrutijalewar.com">
-      Ionic Framework Team
+      Shruti Sharma
     </author>
   <content src="index.html"/>
   <access origin="*"/>
@@ -13,6 +13,8 @@
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="4000"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>

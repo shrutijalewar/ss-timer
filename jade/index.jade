@@ -6,6 +6,7 @@ html
     title
     link(href='lib/ionic/css/ionic.css', rel='stylesheet')
     link(href='css/style.css', rel='stylesheet')
+    link(href='css/ionic.app.css', rel='stylesheet')
     //
       IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
       <link href="css/ionic.app.css" rel="stylesheet">
@@ -16,8 +17,19 @@ html
     // your app's js
     script(src='js/app.js')
     script(src='js/main_controller.js')
-  body(ng-app='starter')
+  body(ng-app='ss-timer')
     ion-pane
-      ion-header-bar.bar-stable
+      ion-header-bar.bar-royal
         h1.title ss-timer
-      ion-content
+      ion-content.has-header(ng-controller='MainCtrl')
+        .row
+          .col min
+            label.item.item-input
+              input(type='text', ng-model = 'min', placeholder='min')
+          .col sec
+            label.item.item-input
+              input(type='text', ng-model = 'sec', placeholder='sec')
+        .button.button-block.button-balanced(ng-click='start()') Start
+        .button.button-block.button-assertive Stop
+        .button.button-block.button-calm Pause
+        .clock {{timer}}
