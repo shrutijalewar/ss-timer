@@ -25,10 +25,10 @@ html
         .row
           .col min
             label.item.item-input
-              input(type='text', ng-model = 'min', placeholder='min')
+              input(type='text', ng-model = 'min', placeholder='min', min = '0', max = '60')
           .col sec
             label.item.item-input
-              input(type='text', ng-model = 'sec', placeholder='sec')
+              input(type='text', ng-model = 'sec', placeholder='sec', min = '0', max = '60')
         .button.button-block.button-balanced(ng-click='start()') Start
         .button.button-block.button-assertive Stop
         .button.button-block.button-calm Pause
